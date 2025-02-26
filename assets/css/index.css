@@ -8,13 +8,13 @@
     font-size: 50px;
     font-weight: 800;
     text-align: center;
-    color: transparent;
+    color: #fff;
     background-color: var(--gradientColor);
     background-clip: text;
     -webkit-background-clip: text;
 }
 .content__desc {
-    color: var(--subTextcolor);
+    color: var(--subTextColor);
     margin-top: 20px;
     text-align: center;
 }
@@ -60,16 +60,9 @@
     text-align: center;
 
 }
-.alert-scam__title{
-    font-size: 30px;
-    font-weight: 800;
-    color: transparent;
-    background: var(--gradientColor);
-    background-clip: text;
-    -webkit-background-clip: text;
-}
+
 .alert-scam__desc{
-    color: var(--subTextcolor);
+    color: var(--subTextColor);
     margin-top: 8px;
 }
 .scammer__list{
@@ -77,5 +70,99 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+
 }
+.scammer__item{
+    background-color: var(--bgColor3);
+    border-radius: 16px;
+    padding: 16px;
+    gap: 8px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    
+}
+.scammer__name{
+    font-weight: 600;
+
+}
+.sammer__date{
+    color: var(--subTextColor);
+}
+
+  .scammer__item:hover::before {
+    left: auto;
+    right: 0;
+    width: 100%;
+}
+  .scammer__item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: auto;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background-color: #fff;
+    opacity: 0.1;
+    z-index: -1;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
 /*end scammer list*/
+/* warning styles */
+.warning{
+    margin-top: 60px;
+
+}
+.warning__title{
+    text-align: center;
+}
+.warning__list{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.warning__item{
+    background-color: var(--bgColor3);
+    border-radius:16px ;
+    padding: 16px;
+    backdrop-filter: blur(70px)
+}
+
+.warning__item-title{
+    font-weight: 600;
+}
+
+.warning__header{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 8px;
+}
+.warning__header-icon{
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+.warning__content{
+    margin-left: 32px;
+    color: var(--subTextColor);
+    height: 0;
+    overflow: hidden;
+    transition: ease 0.2s;
+}
+.warning__content.active{
+    margin-top: 8px;
+    height: auto;
+}
+
+.warning__header-icon.active{
+    transform: rotate(90deg);
+    transition: transform ease 0.2s;
+}
+
+/* end warning styles */
+

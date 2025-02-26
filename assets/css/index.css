@@ -1,0 +1,81 @@
+.content {
+    max-width: 664px;
+    width: 100%;
+    margin-inline: auto;
+    margin-top: 96px;
+}
+.content__heading {
+    font-size: 50px;
+    font-weight: 800;
+    text-align: center;
+    color: transparent;
+    background-color: var(--gradientColor);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+.content__desc {
+    color: var(--subTextcolor);
+    margin-top: 20px;
+    text-align: center;
+}
+.form-search {
+    max-width: 500px;
+    width: 100%;
+    border-radius:16px;
+    background-color: var(--bgColor3); 
+    border: 1px solid #FFFFFF1A;
+    margin-top: 48px ;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin-inline: auto;
+}
+.form-search__input {
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding-left: 19px;
+    padding-right: 24px;
+    color: var(--textColor);
+
+}
+
+.form-search__btn {
+    flex-shrink: 0;
+}
+
+
+/*scammer list*/
+.alert-scam{
+    margin-top: 138px;
+    background-color: var(--bgColor2);
+    border-radius: 16px;
+    border: 1px solid #FFFFFF1A
+
+}
+.alert-scam__header {
+    padding:16px ;
+    border-bottom:  1px solid #FFFFFF1A;
+    text-align: center;
+
+}
+.alert-scam__title{
+    font-size: 30px;
+    font-weight: 800;
+    color: transparent;
+    background: var(--gradientColor);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+.alert-scam__desc{
+    color: var(--subTextcolor);
+    margin-top: 8px;
+}
+.scammer__list{
+    padding: 50px 30px ;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+/*end scammer list*/
